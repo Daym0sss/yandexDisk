@@ -1,0 +1,43 @@
+ /*
+     ** Получаем список публичных ключей файлов с нужной нам датой
+     */
+    /*$public_keys=array();
+    foreach ($files as $file)
+    {
+        $str_date=$file->{'created'};
+        $creation_date=strtotime($str_date);
+        if ($creation_date>$left_boarder_date)
+        {
+            $public_keys[] = urlencode($file->{'public_key'});
+        }
+    }
+
+    $hrefs=array();
+    foreach ($public_keys as $key)
+    {
+        $curl=curl_init();
+        curl_setopt($curl,CURLOPT_SSL_VERIFYPEER,false);
+        curl_setopt($curl,CURLOPT_URL,"https://cloud-api.yandex.net/v1/disk/public/resources/download?public_key=$key");
+        curl_setopt($curl,CURLOPT_POST,false);
+        curl_setopt($curl,CURLOPT_RETURNTRANSFER,true);
+        $result=curl_exec($curl);
+        $obj=json_decode($result);
+
+        $hrefs[] = $obj->{'href'};
+
+        curl_close($curl);
+    }
+
+    foreach ($hrefs as $href)
+    {
+        echo $hrefs[2];
+        break;
+        $curl=curl_init();
+        curl_setopt($curl,CURLOPT_SSL_VERIFYPEER,false);
+        curl_setopt($curl,CURLOPT_URL,"https://cloud-api.yandex.net/v1/disk/resources/download?public_key=$url");
+        curl_setopt($curl,CURLOPT_POST,true);
+        curl_setopt($curl,CURLOPT_RETURNTRANSFER,true);
+        $result=curl_exec($curl);
+        var_dump($result);
+        curl_close($curl);
+    }*/
